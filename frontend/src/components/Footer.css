@@ -1,0 +1,251 @@
+.footer {
+  --f-bg: #0a2427;
+  --f-panel: rgba(255, 255, 255, 0.04);
+  --f-line: rgba(255, 255, 255, 0.1);
+  --f-text: #eef5f4;
+  --f-muted: #9fc0bd;
+  --f-dim: #7a9c99;
+  --f-accent: #f5b83d;
+  --f-ok: #4ade80;
+
+  background: var(--f-bg);
+  color: var(--f-text);
+  margin-top: auto;
+  border-top: 3px solid var(--f-accent);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--f-text);
+}
+
+.footer-section p {
+  color: var(--f-muted);
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  font-size: 0.925rem;
+}
+
+/* Core features */
+.core-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature {
+  font-size: 0.875rem;
+  color: var(--f-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* API Endpoints */
+.endpoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.endpoint-btn {
+  background: var(--f-panel);
+  border: 1px solid var(--f-line);
+  color: var(--f-muted);
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  text-align: left;
+}
+
+.endpoint-btn:hover {
+  background: rgba(245, 184, 61, 0.1);
+  border-color: var(--f-accent);
+  color: var(--f-text);
+}
+
+.endpoint-btn:focus-visible {
+  outline: 2px solid var(--f-accent);
+  outline-offset: 2px;
+}
+
+/* MVC Info */
+.mvc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mvc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--f-panel);
+  border-radius: 8px;
+  border: 1px solid var(--f-line);
+  border-left: 3px solid var(--f-ok);
+}
+
+.mvc-layer {
+  font-weight: 700;
+  color: var(--f-ok);
+  font-size: 0.875rem;
+}
+
+.mvc-desc {
+  color: var(--f-muted);
+  font-size: 0.875rem;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.category-title {
+  font-weight: 700;
+  color: var(--f-accent);
+  font-size: 0.875rem;
+}
+
+.tech-list {
+  color: var(--f-muted);
+  font-size: 0.875rem;
+  padding-left: 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid var(--f-line);
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-info p {
+  margin: 0;
+  color: var(--f-dim);
+  font-size: 0.85rem;
+}
+
+.footer-info strong {
+  color: var(--f-text);
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links span {
+  color: var(--f-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.contact {
+  color: var(--f-accent) !important;
+  font-weight: 600;
+}
+
+.version {
+  background: transparent;
+  border: 1px solid var(--f-line);
+  padding: 0.15rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.status {
+  color: var(--f-ok) !important;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem 0;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .feature {
+    justify-content: center;
+  }
+
+  .mvc-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
+  }
+
+  .endpoint-btn {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .core-features,
+  .endpoints,
+  .mvc-info,
+  .tech-stack {
+    gap: 0.5rem;
+  }
+
+  .footer-content {
+    padding: 1.25rem 0;
+  }
+}
